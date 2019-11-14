@@ -69,10 +69,6 @@ The output includes columns for all specified variables, and their margins of er
 Any ACS table or vintage available on data.census.gov should be available through tidyverse and this function. As of tidycensus v0.9, there is an artificial limitation that prevents accessing 2010 and 2011 ACS data. This can be removed by deleting lines 45 to 48 in \code{tidycensus::get_acs}. You can edit the function with the command \code{trace("get_acs", edit=TRUE)}.
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 # The table B23001 for range of years
 data <- assemble_peer_acs("B23001", years = c(2014:2017))
