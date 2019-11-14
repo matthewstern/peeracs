@@ -1,5 +1,4 @@
 ## peeracs
-Wraps tidycensus get_acs to provide county, MSA, and US ACS data for a range of years
 
 __peeracs__ is an R package that wraps around the tidycensus `get_acs()` function to cleanly obtain time series data for a region of counties, peer MSAs, and the nation. Currently, it provides the function `assemble_peer_acs()` and a function manual that explains how to employ it. 
 
