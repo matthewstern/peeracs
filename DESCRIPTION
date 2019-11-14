@@ -1,0 +1,13 @@
+Package: peeracs
+Type: Package
+Title: Assemble ACS data for region and peers
+Version: 0.1.0
+Author: Matthew Stern
+Maintainer: Matthew Stern <mstern@cmap.illinois.gov>
+Description: This function wraps around the tidycensus codeget_acs() function to quietly collect 1 year ACS data for a set of counties, a set of peer MSAs, and the country. It collects data for a range of years, and if asked can iterate through racially-specific detailed census tables. It tracks suppressed data, and attempts to replace suppressed data with 5 year ACS. Finally, it sums or calculates a weighted average for the set of counties. It defaults to CMAP's 7 county region, but this can be overridden for use in other regions.
+Depends: 
+  tidyverse, 
+  tidycensus
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
