@@ -11,7 +11,7 @@ library(peeracs)
 ```
 
 
-`assemble_peer_acs)` repeatedly and somewhat intelligently calls `get_acs()` to quietly collect 1-year ACS data for a set of counties, a set of peer MSAs, and the country. It collects data for a range of years, and if asked can iterate through racially-specific detailed census tables. It tracks suppressed data, and attempts to replace suppressed 1-year data with data from the 5-year ACS. Finally, it sums or calculates a weighted average for the set of counties. It defaults to CMAP's 7 county region, but this can be overridden for use by other regions.
+`assemble_peer_acs()` repeatedly and somewhat intelligently calls `get_acs()` to quietly collect 1-year ACS data for a set of counties, a set of peer MSAs, and the country. It collects data for a range of years, and if asked can iterate through racially-specific detailed census tables. It tracks suppressed data, and attempts to replace suppressed 1-year data with data from the 5-year ACS. Finally, it sums or calculates a weighted average for the set of counties. It defaults to CMAP's 7 county region, but this can be overridden for use by other regions.
 
 ## assemble_peer_acs arguments
 ```r
