@@ -13,7 +13,6 @@ assemble_peer_acs(table = NULL, variables = NULL, years = 2018,
   avg_weight = NULL, state_fips = "17",
   counties = c("031", "043", "089", "093", "097", "111", "197")))
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{table}{
 The ACS table to pull. This can be a regular (e.g. \code{"B23001"}) or race-specific (e.g. \code{"B23002H"}) table, but if \code{racial=TRUE} input the generic version of the race-specific table (e.g. \code{"B23002"}). If specified, user cannot also specity \code{variables}.
@@ -60,15 +59,15 @@ The output includes rows for \code{GEOG = c("county", "MSA", "country")}. County
 The output includes columns for all specified variables, and their margins of error. The variable \code{SUPPRESSED} represents the number of variables with suppressed data for the given geography and year. \code{COUNT} is only populated for the regional summary row, and represents the number of non-suppressed counties feeding into the summary. If \code{try_suppressed = TRUE}, \code{COUNT} should equal \code{len(counties)} but \code{SURVEY} may equal "acs1,acs5" indicating some 5-year data was used. If \code{try_suppressed = FALSE}, \code{COUNT} may be less than the number of counties.
 }
 \references{
-%% ~put references to the literature/web site here ~
+
 }
 \author{
-%%  ~~who you are~~
+
 }
 \note{
 Any ACS table or vintage available on data.census.gov should be available through tidyverse and this function. As of tidycensus v0.9, there is an artificial limitation that prevents accessing 2010 and 2011 ACS data. This can be removed by deleting lines 45 to 48 in \code{tidycensus::get_acs}. You can edit the function with the command \code{trace("get_acs", edit=TRUE)}.
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
+
 \examples{
 # The table B23001 for range of years
 data <- assemble_peer_acs("B23001", years = c(2014:2017))
@@ -85,7 +84,4 @@ data <- assemble_peer_acs(variables = c("B19013_001", "B01001_001"),
                                         years = 2014:2015, racial = TRUE,
                                         avg_weight = "B01001_001")
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
